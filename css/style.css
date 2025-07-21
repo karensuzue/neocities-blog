@@ -1,0 +1,36 @@
+body {
+  background-color: white;
+  color: black;
+  font-family: Verdana;
+}
+
+/* Formatting for class 'sidebar' (navigation bar) */
+.sidebar {
+    width: 200px;
+    background-color: #222;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+}
+
+/* Formatting for anchor tags within class 'sidebar' */
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+    margin-bottom: 4px;
+}
+/* Hover effect */
+.sidebar a:hover {
+    background-color: #444
+}
+
+.content {
+    margin-left: 210px;
+    padding: 20px;
+}
+
