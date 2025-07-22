@@ -27,35 +27,33 @@ async function getPostInfo(logName, postNum) {
         return `<p>Post ${postNum} not found in ${logName}.</p>`
     }
 
-    const postTitle = postElement.querySelector('.post-title');
-    const postDate = postElement.querySelector('.post-date');
+    const postTitle = postElement.querySelector('.post-title')?.textContent || "Untitled";
+    const postDate = postElement.querySelector('.post-date')?.textContent || "Unknown Date";
 
-    return [postTitle, postDate];
+    return {postTitle, postDate};
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    const postContainer = document.getElementById("post-container");
+    const links = postContainer.querySelectorAll('a');
+    
     (async () => {
         // Fetch and display blog title and date
-        const postContainer = document.getElementById("post-container");
-        const links = postContainer.querySelectorAll('a');
         for (const link of links) {
+            console.log("Link:", link.href);
+
             const url = new URL(link.href);
             const year = url.searchParams.get('year');
             const month = url.searchParams.get('month');
             const postNum = url.hash.substring(1);
             const postInfo = await getPostInfo(`${year}-${month}`, postNum);
             if (postInfo) {
-                link.textContent = `${postInfo.postDate}: ${postInfo.postTitle};`
+                link.textContent = `${postInfo.postDate}: ${postInfo.postTitle}`;
             }
         }
-    }); 
-});
-    
+    }) (); // "()" invokes it idk js is stupid
 
-document.addEventListener('DOMContentLoaded', () => {
     // Attach click event listener to all <a> links inside #post-container
-    const postContainer = document.getElementById("post-container");
-    const links = postContainer.querySelectorAll('a');
     links.forEach(link => {
         link.addEventListener('click', async (event) => {
             event.preventDefault(); // Prevent full-page reload
@@ -69,6 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const backLink = '<div class="back-link"><p><a href="blog.html">← Back</a></p></div>';
             postContainer.innerHTML = data + backLink;
         });
-    });
+    }); 
 });
+    
+
 
