@@ -1,5 +1,8 @@
 body {
   background-color: white;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   color: black;
   font-family: Verdana;
 }
@@ -7,7 +10,10 @@ body {
 /* Formatting for class 'sidebar' (navigation bar) */
 .sidebar {
     width: 200px;
-    background-color: #222;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
     overflow-y: scroll;
     position: fixed;
     top: 0;
