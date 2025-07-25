@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <!-- METADATA -->
+    <!--
+    Hello! Feel free to reference my code and ask me questions through my guestbook. 
+    However, please don’t copy my entire layout (not that I’m particularly good at this anyway - 
+    you're probably better off learning from someone else!)
+            -Karen
+    -->
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,33 +15,43 @@
     </head>
 
     <body>
-        <div class="sidebar" id="sidebar">
-            <script src="js/load-sidebar.js"></script>
-            <script src="js/scroll-preserve.js"></script>
-        </div>
-        <div class="content">
-            <h1>This site is under construction ^_^</h1>
-            <p><b>Welcome to my home on the web!</b></p>
-            <p>
-                I built this website to document everything I love. I’ve come to realize, in these past few years, 
-                how detrimental social media is to my psyche and creativity - and how making my own website, having 
-                control over every tiny detail of how it's represented (and how I'm represented by extension), is 
-                actually a perfect solution to all of my problems, including my irrational need for documentation 
-                and organization across many parts of my life.
-            </p>
+        <div class="banner"></div>
 
-            <p>
-                <b>I made this site for me, and me only!</b> 
-                But I do hope you have a good time here ♡ 
-                Please feel free to reach out and write in my <a href="guestbook.html">guestbook</a>!
-            </p>
+        <div class="main-area">
+            <div class="sidebar" id="sidebar"></div>
+            <div class="content">
+                <h1>This site is under construction ^_^</h1>
+                <p><b>Welcome to my home on the web!</b></p>
+                <p>
+                    I built this website to document everything I love. I’ve come to realize, in these past few years, 
+                    how detrimental social media is to my psyche and creativity - and how making my own website, having 
+                    control over every tiny detail of how it's represented (and how I'm represented by extension), is 
+                    actually a perfect solution to all of my problems, including my irrational need for documentation 
+                    and organization across many parts of my life.
+                </p>
 
-            <p>
-                <b>This site is probably not phone-compatible right now.</b>
-                I plan to make that happen in the future, but I’m still new to front-end.
-            </p>
-            <center><a href="https://lovesick.cafe/grrrl"><img src="images/badges/madebya-rose.png" class="pixel-art"></a></center>
+                <p>
+                    <b>I made this site for me, and me only!</b> 
+                    But I do hope you have a good time here ♡ 
+                    Please feel free to reach out and write in my <a href="guestbook.html">guestbook</a>!
+                </p>
+
+                <p>
+                    <b>This site is probably not phone-compatible right now.</b>
+                    I plan to make that happen in the future, but I’m still new to front-end.
+                </p>
+            </div>
         </div>
+        
+        <footer>
+            <div id="last-updated"></div>
+            <center><i>an unhatched egg</i> © est. 2025 – </center>
+            <center>All rights reserved.</center>
+        </footer>
     </body>
-
+        
+    <script src="js/load-sidebar.js"></script>
+    <script src="js/scroll-preserve.js"></script>
+    <script src="js/auto-foot.js"></script>
+    
 </html>

@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
-    <!-- METADATA -->
+    <!--
+    Tags:
+    - site: site maintenance, layout updates, etc.
+    - vessel: self love
+    -->
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +13,27 @@
     </head>
 
     <body>
-        <!--
-            Tags:
-            - site: site maintenance, layout updates, etc.
-            - vessel: self love
-        -->
-        <div class="sidebar" id="sidebar">
-            <script src="js/load-sidebar.js"></script>
-            <script src="js/scroll-preserve.js"></script>
-        </div>
-        <div class="content">
-            <p>Loading post...</p>
-        </div>
-        <div class="content" id="post-container">
-            <a href="blog.html?year=2025&month=07#1"></a>
-            <br>
-            <a href="blog.html?year=2025&month=07#2"></a>
+        <div class="banner"></div>
+
+        <div class="main-area">
+            <div class="sidebar" id="sidebar"></div>
+            <div class="content" id="post-container">
+                <p>Loading post...</p>
+                <a href="blog.html?year=2025&month=07#1"></a><br>
+                <a href="blog.html?year=2025&month=07#2"></a>
+            </div>
         </div>
 
-        <script src="js/blog.js"></script>
+        <footer>
+            <div id="last-updated"></div>
+            <center><i>an unhatched egg</i> © est. 2025 – </center>
+            <center>All rights reserved.</center>
+        </footer>
     </body>
+    
+    <script src="js/load-sidebar.js"></script>
+    <script src="js/scroll-preserve.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/auto-foot.js"></script>
+    
 </html>
