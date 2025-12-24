@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f3eadf;
+    color: #2a1c14;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.6;
+}
+
+/* Links (non-nav) */
+a {
+    color: #6b3f1d;
+    text-decoration: none;
+}
+a:hover {
+    color: #b06a2a;
+}
+
+/* Page Wrapper */
+#container {
+    width: 760px;             
+    margin: 40px auto;
+    background-color: #fff8f0;
+    border: 1px solid #c9b6a4;
+    padding: 30px;
+}
+
+/* Header */
+h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: normal;
+    text-align: center;
+    /*border-bottom: 1px solid #c9b6a4;*/
+    /*padding-bottom: 10px;*/
+}
+
+/* Navigation Bar */
+#nav {
+    text-align: center;
+    margin: 15px 0 30px 0;
+    font-size: 16px;
+}
+#nav a {
+    margin: 0 10px;
+    padding: 2px 4px;
+    color: #5a351b;
+}
+#nav a:hover {
+    color: #c06b2b;
+    background-color: #efe0d2;
+}
+
+
+ /* Content */
+h2 {
+    font-size: 22px;
+    font-weight: normal;
+    border-bottom: 1px solid #d6c5b5;
+    margin-top: 40px;
+}
+
+p {
+    font-size: 15px;
+}
+
+
+/* Footer */
+#footer {
+    margin-top: 50px;
+    font-size: 13px;
+    text-align: center;
+    color: #6d5a4a;
+    /* border-top: 1px solid #c9b6a4; */
+    padding-top: 10px;
+}
+
+
+/* ---------- KNIT.HTML, PHOTO.HTML, ART.HTML -------- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top:12px;
+}
+
+.card {
+    border: 1px solid #d6c5b5;
+    background: #fffdf8;
+    padding: 10px;
+}
+.card.dream {
+    opacity: 0.7;
+    background-color: #fffdf8;
+    border-style: dashed;
+}
+
+.thumb {
+    position: relative;
+    display: block;
+    border: 1px solid #c9b6a4;
+    background: #ffffff;
+    padding: 3px;
+}
+.thumb img {
+    display:block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;    
+}
+
+.tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #2a1c14;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 8px;
+    border: 1px solid #2a1c14;
+}
+
+.title {
+    margin: 10px 2px 6px 2px;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.meta {
+    font-size: 13px;
+    color: #6d5a4a;
+    text-align:center;
+    margin: 0 2px 8px 2px;
+}
+
+.progress {
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+}
+
+.photos {
+    text-align: center;
+}
+.photos img {
+    max-width: 100%;
+    border: 1px solid #c9b6a4;
+    padding: 3px;
+    background: #ffffff;
+    margin-bottom: 10px;
+}
+
+
+/* ------- PHOTO ALBUM GRIDS ----- */
+.album{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+.album a{
+    border: 1px solid #c9b6a4;
+    padding: 3px;
+    background: #ffffff;
+    display: block;
+}
+.album img{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* -------- SMALL SCREENS ----- */
+@media (max-width: 900px){
+    #container{ width:auto; margin: 20px 12px; }
+    .grid{ grid-template-columns: repeat(2, 1fr); } /* drop to 2 columns then 1 */
+    .album{ grid-template-columns: repeat(3, 1fr); } /* drop to 3 columns then 2 */
+}
+@media (max-width: 600px){
+    .grid{ grid-template-columns: 1fr; }
+    .thumb img{ height: 240px; }
+    .album{ grid-template-columns: repeat(2, 1fr); }
+    .album img{ height: 180px; }
+}

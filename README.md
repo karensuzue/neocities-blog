@@ -1,2 +1,5 @@
 # neocities-blog
-my personal neocities site
+`images` folder needs to be copied manually.
+```
+npm run build > ... > git push
+```
