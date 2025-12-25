@@ -28,39 +28,81 @@ you're probably better off learning from someone else!)
             <a href="commonplace.html">Commonplace</a> |
             <a href="https://veinsandvows.atabook.org/">Guestbook</a>
         </div>
-        
+
         <h2>Home</h2>
         <p>Welcome to my home on the web!</p>
+        <img src="assets/girl.png" style="float: right">
         <p>
             I built this website to document everything I love. 
-            I've come to realize, in these past few years, how 
-            detrimental social media is to my mental health
-             - and how making my own website, having control 
-            over every tiny detail of how it's presented 
-            (and how I'm represented by extension), is actually a perfect 
-            solution to all of my problems, including my irrational 
-            need for documentation and organization across many parts 
-            of my life.
+            Over the past few years, I’ve come to realize how 
+            detrimental social media has been to my mental health, 
+            and how creating my own website is actually the perfect 
+            solution to many of my problems.
         </p>
         <p>
-            I made this site for me, and me only! But I do hope you 
-            have a good time here. Please feel free to reach out and 
-            write in my <a href="contact.html">guestbook</a>!
+            I’ve always wanted a centralized, intentional space to 
+            capture different parts of my life. I’m a huge
+            data hoarder—<i>ahem</i>, archivist—
+            and this site serves as an outlet for sorting 
+            through the clutter in my filesystem (and my brain) 
+            and turning it into something meaningful.
+        </p>
+        <p>
+            I also disliked how social media stifled my self-expression.
+            Here, I have full control 
+            over every detail of how my site is presented 
+            (and, by extension, how I’m represented). 
+            I get to post whatever I want. I get to enjoy 
+            things that may not be trendy or considered “cool,”
+            without worrying about anyone scrutinizing them. 
+            Chances are, if you have
+            access to this site, you’re a friend.
+        </p>
+        <p>
+            <b>I made this site for me, and me only!</b> But I do hope you 
+            enjoy your time here. Please feel free to reach out and 
+            sign my <a href="contact.html">guestbook</a>!
         </p>
 
-        <h2>Updates</h2>
-            <ul>
-            <li>
-                <b>December 21, 2025</b> — Added <a href="about.html">About</a>, 
-                <a href="contact.html">Contact</a>, 
-                <a href="knit.html">Knitting Projects</a>,
-                <a href="photo.html">Photo Albums</a>,
-                and cleaned up the site layout.
-            </li>
-            <li>
-                <b>December 24, 2025</b> — Connected this blog to a GitHub repository and set up Eleventy.
-            </li>
-            </ul>
+
+        <div class="panel-grid">
+            <div class="panel">
+                <h3>Updates</h3>
+                <div class="scrolly">
+                    <ul>
+                        <li>
+                            <b>December 21, 2025</b> — Added <a href="about.html">About</a>, 
+                            <a href="contact.html">Contact</a>, 
+                            <a href="knit.html">Knitting Projects</a>,
+                            <a href="photo.html">Photo Albums</a>,
+                            and cleaned up the site layout.
+                        </li>
+                        <li>
+                            <b>December 24, 2025</b> — Connected this blog to a GitHub repository and set up Eleventy.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 'position: relative' seems to place absolute-positioned children relative to the panel -->
+            <!-- How does this work? I don't know lol-->
+            <div class="panel" style="position: relative;">
+                <img src="assets/badge1.png" style="position: absolute; 
+                    width: 140px; 
+                    right: -50px; 
+                    bottom: -60px;
+                    z-index: 5; 
+                    pointer-events: none;">
+                <h3>To-Do</h3>
+                <div class="scrolly">
+                    <ul>
+                        <li>Create Wardrobe page</li>
+                        <li>Set up Commonplace/Digital Garden with 11ty</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+            
     </div>
 
     <div id="footer">

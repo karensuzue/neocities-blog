@@ -1,3 +1,4 @@
+/* ---- UNIVERSAL ---- */
 body {
     margin: 0;
     padding: 0;
@@ -5,6 +6,19 @@ body {
     color: #2a1c14;
     font-family: Georgia, 'Times New Roman', Times, serif;
     line-height: 1.6;
+}
+
+/* Page divider */
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #c9b6a4,
+        transparent
+    );
+    margin: 40px 0;
 }
 
 /* Links (non-nav) */
@@ -51,8 +65,7 @@ h1 {
     background-color: #efe0d2;
 }
 
-
- /* Content */
+/* Content */
 h2 {
     font-size: 22px;
     font-weight: normal;
@@ -60,11 +73,11 @@ h2 {
     margin-top: 40px;
 }
 
+/* Paragraphs */
 p {
     font-size: 15px;
     max-width: 65ch;
 }
-
 p + p {
     margin-top: 1.2em;
 }
@@ -79,8 +92,64 @@ p + p {
     padding-top: 10px;
 }
 
+/* Marginal decorative images */
+/* .marginal {
+    float: right;
+    width: 300px;
+    opacity: 0.95;
+}
+.marginal.right {
+    float: right;
+    margin-left: 18px;
+}
+.marginal.left {
+    float: left;
+    margin-right: 18px;
+}
+.marginal.up {
+    margin-bottom: 18px; 
+}
+.marginal.down {
+    margin-top: 18px;
+} */
 
-/* ---------- KNIT.HTML, PHOTO.HTML, ART.HTML -------- */
+/* ---- SCROLLY PANELS (updates, todo, etc.) ---- */
+.panel-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-top: 12px;
+}
+.panel {
+    border: 1px solid #d6c5b5;
+    background: #fffdf8;
+    padding: 12px 14px;
+    font-size: 15px;
+}
+.panel h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    border-bottom: 1px solid #d6c5b5;
+    padding-bottom: 6px;
+}
+
+.scrolly {
+    height: 170px;   
+    overflow-y: scroll;
+    padding-right: 14px;
+}
+.scrolly ul {
+    margin: 0;
+    padding-left: 50px;
+}
+.scrolly li {
+    margin: 0 0 10px 0;
+}
+
+
+/* ---- KNIT.HTML, PHOTO.HTML, ART.HTML ---- */
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -158,8 +227,13 @@ p + p {
     margin-bottom: 10px;
 }
 
+.note {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: #6d5a4a;
+}
 
-/* ------- PHOTO ALBUM GRIDS ----- */
+/* ---- PHOTO ALBUM GRIDS ---- */
 .album{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -178,8 +252,7 @@ p + p {
     display: block;
 }
 
-
-/* -------- SMALL SCREENS ----- */
+/* ---- SMALL SCREENS ---- */
 @media (max-width: 900px){
     #container{ width:auto; margin: 20px 12px; }
     .grid{ grid-template-columns: repeat(2, 1fr); } /* drop to 2 columns then 1 */
@@ -190,4 +263,5 @@ p + p {
     .thumb img{ height: 240px; }
     .album{ grid-template-columns: repeat(2, 1fr); }
     .album img{ height: 180px; }
+    .panel-grid { grid-template-columns: 1fr; }
 }
