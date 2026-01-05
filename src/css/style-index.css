@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f0e8;
+    color: #2a1c14;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.6;
+}
+
+#container {
+    position: relative;
+    width: 700px;
+    margin: 70px auto;
+}
+
+#window {
+    position: absolute;
+    left: 25%;
+    top: 30px;
+    width: 250px;
+    z-index: 1;
+}
+
+#train {
+    position: absolute;
+    left: 30%;
+    top: 150px;
+    transform: translateX(120px);
+    width: 300px;
+    z-index: 2;
+}
+
+#envelope {
+    position: absolute;
+    left: 10%;
+    top: 170px;
+    transform: rotate(-10deg);
+    width: 300px;
+    z-index: 3;
+}

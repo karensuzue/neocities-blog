@@ -18,36 +18,52 @@ you're probably better off learning from someone else!)
 
 <body>
     <div id="container">
-        <h1>an unhatched egg</h1>
-        <div id="nav">
-            <a href="index.html">Home</a> |
-            <a href="about.html">About</a> |
-            <a href="photo.html">Photos</a> |
-            <a href="art.html">Art</a> |
-            <a href="knit.html">Knitting</a> |
-            <a href="commonplace.html">Commonplace</a> |
-            <a href="https://veinsandvows.atabook.org/">Guestbook</a>
+        <div id="header">
+            <img src="assets/banner2.jpg" id="site-banner"> 
+            <h1>an unhatched egg</h1>
+            <div id="nav">
+                <a href="home.html">Home</a> |
+                <a href="about.html">About</a> |
+                <a href="photo.html">Photos</a> |
+                <a href="art.html">Art</a> |
+                <a href="knit.html">Knitting</a> |
+                <a href="commonplace.html">Commonplace</a> |
+                <a href="https://veinsandvows.atabook.org/">Guestbook</a> |
+                <a href="links.html">Links</a>
+            </div>
         </div>
         
         <h2>Photo Albums</h2>
         <p>
-            A page for me to share cool photos of myself, friends, and family.
+            A page for me to share photos of myself, friends, and family.
         </p>
         <p>
-            I try to be very selective about what I share here.
-            I've made a promise to myself not to share any selfies unless
-            it's a really good one.
-            I take a lot of photos compulsively, and honestly, 
-            it's become a bit of a problem. 
-            I can easily spend hours taking pictures of myself and the things I own, 
-            then spend another few hours sorting through them, 
-            and the rest of the day ruminating over it. 
-            It's exhausting and, in my opinion, obviously unhealthy. 
-            It doesn't help that I'm recovering from over a decade of body dysmorphia.    
+            I try to be very selective about what I share here. 
+            I aim to post photos that capture a special moment, 
+            have (what I believe is) artistic or professional quality, 
+            aren’t mindlessly “mass-produced” (like selfies), 
+            and represent me well. 
+            I’ve promised myself not to post selfies unless they’re truly good ones.
+        </p>
+        <p>
+            I have a bad habit of compulsively taking photos with my phone - partly because of how easy it 
+            is nowadays (I’m even considering getting a digital camera just to separate 
+            photo-taking from phone use), and partly because of the 
+            validation I get from sharing them - so this page is my way of curbing that habit. 
+            I used to spend hours photographing myself and my belongings, 
+            then even more hours sorting through those images, 
+            and the rest of the day ruminating over them. 
+            It’s exhausting and, in my opinion, clearly unhealthy.
+        </p>
+        <p>
+            It doesn’t help that I’m recovering from more than a decade of 
+            body dysmorphia, so I’m trying to be more mindful and 
+            intentional moving forward.
         </p>
         <p>
             Click on an album to see more photos!
         </p>
+
 
         <!-- ADD PROJECTS HERE -->
         <div class="grid">
@@ -106,12 +122,28 @@ you're probably better off learning from someone else!)
                 <div class="title">HCMC Summer</div>
                 <div class="meta">May-August 2019</div>
             </div>
-            
         </div>
-    </div>
 
-    <div id="footer">
-        © 2025 an unhatched egg
+
+        <p style="font-size: 13px">
+            Last modified: <span id="last-modified"></span>
+        </p>
+        <script>
+            const d = new Date(document.lastModified);
+            document.getElementById("last-modified").textContent =
+                d.toLocaleDateString(undefined, {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                hour: "2-digit",
+                minute: "2-digit"
+                });
+        </script>
+
+        <div id="footer">
+            <img src="assets/div.png">
+            © 2025 an unhatched egg
+        </div>
     </div>
 </body>
 

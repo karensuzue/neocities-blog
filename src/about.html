@@ -18,15 +18,19 @@ you're probably better off learning from someone else!)
 
 <body>
     <div id="container">
-        <h1>an unhatched egg</h1>
-        <div id="nav">
-            <a href="index.html">Home</a> |
-            <a href="about.html">About</a> |
-            <a href="photo.html">Photos</a> |
-            <a href="art.html">Art</a> |
-            <a href="knit.html">Knitting</a> |
-            <a href="commonplace.html">Commonplace</a> |
-            <a href="https://veinsandvows.atabook.org/">Guestbook</a>
+        <div id="header">
+            <img src="assets/banner2.jpg" id="site-banner"> 
+            <h1>an unhatched egg</h1>
+            <div id="nav">
+                <a href="home.html">Home</a> |
+                <a href="about.html">About</a> |
+                <a href="photo.html">Photos</a> |
+                <a href="art.html">Art</a> |
+                <a href="knit.html">Knitting</a> |
+                <a href="commonplace.html">Commonplace</a> |
+                <a href="https://veinsandvows.atabook.org/">Guestbook</a> |
+                <a href="links.html">Links</a>
+            </div>
         </div>
         
         <h2>About</h2>
@@ -49,15 +53,17 @@ you're probably better off learning from someone else!)
         <p>
             Outside of academia, I am a formally trained <a href="art.html"><b>artist</b></a>
             and a less formally competent ballet school graduate 
-            (I wouldn't call myself an actual ballet dancer). I also
-            underwent classical piano training for over a decade during my "youth" (2006-2017), 
+            (I attended the Ho Chi Minh City Intermediate Dance School for 6 years, 
+            though I wouldn't call myself an actual ballet dancer). 
+            I also underwent classical piano training for over a decade, from 2006-2017, 
             but I haven't played seriously in years.
             More recently, I picked up <a href="knit.html"><b>knitting</b></a> in October 2025, 
             which has quickly become one of my current hyperfixations. 
         </p>
         <p>
             If you care about personality typologies, I am an <b>INFP-T</b>.
-            Astrologically, my tropical big three are <b>Gemini rising</b>, <b>Scorpio sun</b>, and <b>Scorpio moon</b>.
+            For my astrology-inclined friends, my tropical big three are <b>Gemini rising</b>, 
+            <b>Scorpio sun</b>, and <b>Scorpio moon</b>.
             My sidereal big three are <b>Taurus rising</b>, <b>Libra sun</b>, and <b>Scorpio moon</b>. 
             My Vedic nakshatras are <b>Rohini rising</b>, <b>Vishakha sun</b>, and <b>Anuradha moon</b>.
         </p>
@@ -65,11 +71,41 @@ you're probably better off learning from someone else!)
             Anyway, thank you so much for being here, and welcome! I hope you enjoy your stay.
         </p>
 
-        <p><i>Last updated on December 21, 2025.</i></p>
-    </div>
 
-    <div id="footer">
-        © 2025 an unhatched egg
+        <table width="100%" cellpadding="10" cellspacing="0" border="0">
+        <tr valign="top">
+            <!-- Links column -->
+            <td width="50%">
+            <h3>Links</h3>
+            <ul>
+                <li><a href="https://www.ravelry.com/people/azurenukes">Ravelry</a>
+                - a second home for my knitting projects</li>
+                <li><a href="https://app.thestorygraph.com/profile/azurenukes">StoryGraph</a>
+                - what I've read, what I want to read, and what I'm currently reading</li>
+            </ul>
+            </td>
+        </tr>
+        </table>
+
+        <p style="font-size: 13px">
+            Last modified: <span id="last-modified"></span>
+        </p>
+        <script>
+            const d = new Date(document.lastModified);
+            document.getElementById("last-modified").textContent =
+                d.toLocaleDateString(undefined, {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                hour: "2-digit",
+                minute: "2-digit"
+                });
+        </script>
+
+        <div id="footer">
+            <img src="assets/div.png">
+            © 2025 an unhatched egg
+        </div>
     </div>
 </body>
 

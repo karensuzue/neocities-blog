@@ -1,3 +1,8 @@
 node_modules
-images 
+src/images 
 public/images 
+src/extra-assets
+public/extra-assets
+*.pptx
+src/scrap.html
+public/scrap.html
