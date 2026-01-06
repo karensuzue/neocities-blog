@@ -14,6 +14,7 @@ you're probably better off learning from someone else!)
     <title>an unhatched egg</title>
     <link rel="icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/decor-home.css">
 </head>
 
 <body>
@@ -23,13 +24,36 @@ you're probably better off learning from someone else!)
     </div>
     <div id="container-clip">
         <div id="container">
+            <!--
+            These are now links to the credits page! 
             <img src="assets/paper3.png" class="decor paper-top">
             <img src="assets/pen.png" class="decor pen-top">
+            -->
+            <a href="credits.html" class="decor-link paper-top" aria-label="Site credits">
+                <img src="assets/paper3.png" alt="">
+            </a>
+            <a href="credits.html" class="decor-link pen-top" aria-label="Site credits">
+                <img src="assets/pen.png" alt="">
+                <span class="credit-label">Site Credits</span>
+            </a>
+
             <img src="assets/butterfly3.png" class="decor butterfly-right">
             <img src="assets/butterfly14.png" class="decor butterfly-left">
+            <img src="assets/flower2.png" class="decor lavender-bottom">
+
+            <a href="sitemap.html" class="decor-link paper-bottom" aria-label="Sitemap">
+                <img src="assets/paper.png" alt="">
+            </a>
+            <a href="sitemap.html" class="decor-link key-bottom" aria-label="Sitemap">
+                <img src="assets/key3.png" alt="">
+                <span class="credit-label">Site Map</span>
+            </a>
+
+            <!--
+            These are now links to the sitemap page!
             <img src="assets/paper.png" class="decor paper-bottom">
             <img src="assets/key3.png" class="decor key-bottom">
-            <img src="assets/flower2.png" class="decor lavender-bottom">
+            -->
             
             <div id="header">
                 <img src="assets/banner2.jpg" id="site-banner"> 
@@ -41,14 +65,13 @@ you're probably better off learning from someone else!)
                     <a href="art.html">Art</a> |
                     <a href="knit.html">Knitting</a> |
                     <a href="commonplace.html">Commonplace</a> |
-                    <a href="https://veinsandvows.atabook.org/">Guestbook</a> |
-                    <a href="links.html">Links</a>
+                    <a href="https://veinsandvows.atabook.org/">Guestbook</a>
                 </div>
             </div>
 
             <h2>Home</h2>
             <p>Welcome to my home on the web!</p>
-            <img src="assets/banner3.jpg" style="float: right; width: 350px;">
+            <img src="assets/banner3.jpg" class="content-decor cat-home">
             <p>
                 I built this website to document everything I love. 
                 Over the past few years, I’ve come to realize how 
@@ -58,7 +81,8 @@ you're probably better off learning from someone else!)
             </p>
             <p>
                 <b>I made this site for me, and me only!</b> But I do hope you 
-                enjoy your time here. Please feel free to poke around, explore,
+                enjoy your time here. Please feel free to poke around 
+                (there are <i>hidden links</i> scattered throughout!), explore,
                 and sign my <a href="https://veinsandvows.atabook.org/" id="tilting-text">
                     guestbook</a> 
                 if you’d like ✿
@@ -66,9 +90,10 @@ you're probably better off learning from someone else!)
             <p>
                 Many pages on this site (like this one!) are clumsily hand-coded,
                 while others (such as my commonplace book) are generated using 11ty.
-                The whole thing is intended to be mobile-friendly, but I’m still new to front-end work.
+                The whole thing is intended to be mobile-friendly, 
+                but since I’m still new to front-end work, <b>it’s best viewed on a computer</b>.
                 It’s all very much a living, breathing work in progress, so you may
-                occasionally run into a broken link or an odd layout along the way.
+                occasionally encounter a broken link or an odd layout along the way.
             </p> 
 
             <p class="last-modified">

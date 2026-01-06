@@ -1,0 +1,167 @@
+/* ---- HOME PAGE DECORATIONS ---- */
+
+
+/* Behind the content box */
+.girl-bouquet {
+    top: 150px;
+    left: calc(50% - 580px);
+    opacity: 70%;
+}
+
+.side-lamp {
+    top: 500px;
+    right: calc(50% - 600px);
+    opacity: 50%;
+}
+
+
+/* In the content box */
+.cat-home {
+    float: right;
+    width: 350px;
+}
+
+
+/* Above the content box */
+.butterfly-right {
+    width: 120px;
+    right: -70px;
+    top: 0;
+    filter: drop-shadow(6px 6px 4px rgba(0,0,0,0.3));
+}
+
+.butterfly-left {
+    width: 100px;
+    top: 550px;
+    left: -50px;
+    transform: rotate(20deg);
+    filter: drop-shadow(6px 6px 4px rgba(0,0,0,0.3));
+}
+
+.lavender-bottom {
+    width: 150px;
+    bottom: -10px;
+    left: -90px;
+}
+
+
+/* Clickable above decor */
+.paper-top {
+    width: 300px;
+    top: -100px;
+    left: -100px;
+    transform: rotate(150deg);
+    filter: drop-shadow(4px -4px 4px rgba(0,0,0,0.3));
+}
+
+.pen-top {
+    width: 300px;
+    top: -100px;
+    left: -100px;
+    filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.3));
+    transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+
+
+.pen-top:hover {
+    filter: drop-shadow(6px 6px 6px rgba(0,0,0,0.35)) 
+            brightness(1.06) 
+            saturate(1.06);
+    transform: translateY(-2px) rotate(-4deg);
+}
+
+.paper-bottom {
+    width: 550px;
+    bottom: -450px;
+    right: -500px;
+    transform: rotate(-20deg);
+    filter: drop-shadow(6px -4px 6px rgba(0,0,0,0.3));
+}
+
+.key-bottom {
+    width: 300px;
+    bottom: -100px;
+    right: -250px;
+    transform: rotate(40deg);
+    filter: drop-shadow(3px 3px 4px rgba(0,0,0,0.3));
+    transition: transform 0.15s ease, filter 0.15s ease;
+}
+.key-bottom:hover {
+    filter: drop-shadow(6px 6px 6px rgba(0,0,0,0.35)) 
+            brightness(1.06) 
+            saturate(1.06);
+    transform: translateY(-2px) rotate(36deg);
+}
+
+.pen-top:hover .credit-label { /* show on hover of pen (not label!!!11!) */
+    opacity: 1;
+    transform: translateX(-50%) translateY(4px); /* slight move down on appear */
+}
+.key-bottom:hover .credit-label { /* show on hover of key */
+    opacity: 1;
+    transform: translateX(-90px) translateY(-4px) rotate(-30deg); /* slight move down on appear */
+}
+
+
+/* ---- SMALL SCREENS ---- */
+@media (max-width: 900px) {
+    .paper-bottom {
+        width: 400px;
+        right: -300px;
+        bottom: -300px;
+    }
+    .key-bottom {
+        width: 200px;
+        right: -50px;
+        bottom: -50px;
+    }
+    .pen-top {
+        width: 200px;
+        left: -50px;
+        top: -50px;
+    }
+    .paper-top {
+        width: 200px;
+        left: -50px;
+        top: -50px;
+    }
+}
+
+@media (max-width: 450px) {
+    .paper-bottom {
+        width: 350px;
+        right: -350px;
+        bottom: -350px;
+    }
+    .key-bottom {
+        width: 100px;
+        right: -50px;
+        bottom: -50px;
+    }
+    .pen-top {
+        width: 150px;
+        left: -50px;
+        top: -50px;
+    }
+    .paper-top {
+        width: 150px;
+        left: -50px;
+        top: -50px;
+    }
+    .cat-home {
+        width: 150px;
+    }
+    .lavender-bottom {
+        width: 100px;
+        left: -45px;
+    }
+    .butterfly-left {
+        width: 70px;
+        left: -30px;
+    }
+    .butterfly-right {
+        width: 80px;
+        right: -40px;
+    }
+}

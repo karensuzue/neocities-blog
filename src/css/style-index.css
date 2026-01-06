@@ -1,40 +1,107 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #f4f0e8;
-    color: #2a1c14;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    line-height: 1.6;
+  background-image: url('../assets/bg5.gif');
+  background-repeat: repeat;
 }
 
-#container {
-    position: relative;
-    width: 700px;
-    margin: 70px auto;
+/* ---- LETTER CONTENT ---- */
+#letter {
+  width: min(760px, calc(100vw - 40px));
+  margin: 60px auto;
+  background: rgba(255,255,255,0.8);
+  border: solid 1px #d6c5b5;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  position: relative;
+  z-index: 2;
 }
 
-#window {
-    position: absolute;
-    left: 25%;
-    top: 30px;
-    width: 250px;
-    z-index: 1;
+/* ---- EACH SECTION (with fade-in) ---- */
+.beat {
+  margin: 70px 0;      
+  /* default state: hidden-ish */
+  opacity: 0;
+  transform: translateY(16px); /* starts slightly below */
+  transition: opacity 700ms ease, transform 700ms ease;
+}
+.beat.in { /* when in view, JS-added*/
+  opacity: 1;
+  transform: translateY(0); /* moves up */
+}
+/* cleafix to stop float affecting next sections */
+.beat::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
-#train {
-    position: absolute;
-    left: 30%;
-    top: 150px;
-    transform: translateX(120px);
-    width: 300px;
-    z-index: 2;
+/* ---- TEXT LINES ---- */
+.line {
+  font-size: 16px;
+  margin: 14px 0;
+  max-width: 60ch;
+}
+.line.big {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 22px;
 }
 
-#envelope {
-    position: absolute;
-    left: 10%;
-    top: 170px;
-    transform: rotate(-10deg);
-    width: 300px;
-    z-index: 3;
+/* ---- IMAGES ---- */
+.illus {
+  width: 280px;
+  height: auto;
+  margin: 10px 0 18px 0;
+}
+
+.train {
+  float: left;
+  margin-right: 22px;
+}
+
+.window {
+  display: block;
+  margin: 20px auto 25px auto;
+  float: none;
+}
+
+.binoculars {
+  display: block;
+  width: 120px;
+  margin: 10px auto;
+  float: none;
+  opacity: 0.7;
+}
+
+/* ---- ENTER LINK ---- */
+.enter{
+  text-align: center;
+  font-size: 20px;
+  margin-top: 24px;
+}
+.enter a{
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid #8f8f8f;
+  background: rgba(255,255,255,0);
+  letter-spacing: 0.08em;
+  text-decoration: none;;
+  color: #6b3f1d;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.enter a:hover{
+  background: rgba(255,255,255,1);
+  transform: scale(1.05);
+}
+
+/* ---- SMALL SCREENS ---- */
+/* stop weaving, stack */
+@media (max-width: 600px){
+  .illus{ width: 100%; max-width: 360px; }
+  .train, .window{
+    float: none;
+    display: block;
+    margin: 18px auto;
+  }
+  .line{ font-size: 13px; }
 }

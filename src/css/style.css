@@ -27,11 +27,10 @@ hr {
 /* Links (non-nav) */
 a {
     color: #6b3f1d;
-    text-decoration: none;
 }
 a:hover {
     color: #b06a2a;
-    text-decoration: underline bold;
+    text-decoration: underline;
 }
 
 /* Page Wrapper */
@@ -87,6 +86,7 @@ h1 {
     margin: 0 10px;
     padding: 2px 4px;
     color: #5a351b;
+    text-decoration: none;
 }
 #nav a:hover {
     color: #7b7062;
@@ -144,6 +144,7 @@ p + p {
     margin: 0 auto 12px;
     max-width: 250px;
     opacity: 70%;
+    pointer-events: none;
 }
 
 /* Text effects */
@@ -240,6 +241,7 @@ p + p {
     margin: 0;
 }
 
+/* ---- KNITTING DETAILS (knit/_.html) ---- */
 .photos {
     text-align: center;
 }
@@ -257,7 +259,7 @@ p + p {
     color: #6d5a4a;
 }
 
-/* ---- PHOTO ALBUM GRIDS (photo/_.html) ---- */
+/* ---- PHOTO ALBUM DETAILS (photo/_.html) ---- */
 .album{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -285,19 +287,10 @@ p + p {
     height: auto;
 }
 
-.girl-bouquet {
-    top: 150px;
-    left: calc(50% - 580px);
-    opacity: 70%;
+/* In the content box */
+.content-decor {
+    pointer-events: none;
 }
-
-.side-lamp {
-    top: 500px;
-    right: calc(50% - 600px);
-    opacity: 50%;
-}
-
-
 
 /* Above the content box */
 .decor {
@@ -307,96 +300,69 @@ p + p {
     height: auto;
 }
 
-/* individual pieces */
-.butterfly-right {
-    width: 120px;
-    right: -70px;
-    top: 0;
-    filter: drop-shadow(6px 6px 4px rgba(0,0,0,0.3));
+
+/* Clickable above decor */
+.decor-link {
+    position: absolute;
+    z-index: 21;
+    height: auto;
+    pointer-events: auto;
+}
+.decor-link img {
+    width: 100%;
+    height: auto;
 }
 
-.butterfly-left {
-    width: 100px;
-    top: 550px;
-    left: -50px;
-    transform: rotate(20deg);
-    filter: drop-shadow(6px 6px 4px rgba(0,0,0,0.3));
+
+.credit-label { /* 'site credit' label */
+    position: absolute;
+    top: 70%; 
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #5a351b;
+    background: #fff8f0;
+    border: 1px solid #c9b6a4;
+    padding: 4px 8px;
+
+    /* start hidden, cannot receive mouse events */
+    opacity: 0;  
+    pointer-events: none;
+    white-space: nowrap;
+    
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    transition: opacity 0.15s ease 0.1s, transform 0.15s ease 0.1s;
 }
 
-.paper-bottom {
-    width: 550px;
-    bottom: -450px;
-    right: -500px;
-    transform: rotate(-20deg);
-    filter: drop-shadow(6px -4px 6px rgba(0,0,0,0.3));
-}
-
-.key-bottom {
-    width: 300px;
-    bottom: -100px;
-    right: -250px;
-    transform: rotate(40deg);
-    filter: drop-shadow(3px 3px 4px rgba(0,0,0,0.3));
-}
-
-.pen-top {
-    width: 300px;
-    top: -100px;
-    left: -100px;
-    filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.3));
-}
-
-.paper-top {
-    width: 300px;
-    top: -100px;
-    left: -100px;
-    transform: rotate(150deg);
-    filter: drop-shadow(4px -4px 4px rgba(0,0,0,0.3));
-}
-
-.lavender-bottom {
-    width: 150px;
-    bottom: -10px;
-    left: -90px;
-}
 
 /* ---- SMALL SCREENS ---- */
-@media (max-width: 850px) {
+@media (max-width: 900px) {
+    .grid{ grid-template-columns: repeat(2, 1fr); } /* drop to 2 columns */
+    .album{ grid-template-columns: repeat(3, 1fr); } /* drop to 3 columns */
     #container {
         width: calc(100vw - 50px);
         padding: 20px 32px;
     }
-    .paper-bottom {
-        width: 400px;
-        right: -300px;
-        bottom: -300px;
+    .behind-decor{
+        display: none;
     }
-    .key-bottom {
-        width: 200px;
-        right: -50px;
-        bottom: -50px;
-    }
-    .pen-top {
-        width: 200px;
-        left: -50px;
-        top: -50px;
-    }
-    .paper-top {
-        width: 200px;
-        left: -50px;
-        top: -50px;
-    }
-}
-@media (max-width: 900px) {
-    .grid{ grid-template-columns: repeat(2, 1fr); } /* drop to 2 columns then 1 */
-    .album{ grid-template-columns: repeat(3, 1fr); } /* drop to 3 columns then 2 */
 }
 @media (max-width: 600px) {
-    .grid{ grid-template-columns: 1fr; }
+    .grid{ grid-template-columns: 1fr; } /* drop to 1 column */
     .thumb img{ height: 240px; }
-    .album{ grid-template-columns: repeat(2, 1fr); }
+    .album{ grid-template-columns: repeat(2, 1fr); } /* drop to 2 columns */
     .album img{ height: 180px; }
-    .panel-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 450px) {
+    #container {
+        width: calc(100vw - 10px);
+        padding: 20px 32px;
+    }
+    .credit-label {
+        font-size: 14px;
+    }
 }
 
 
