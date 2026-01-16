@@ -20,13 +20,12 @@
         </section>
 
         <section class="beat">
-            <img src="assets/train.png" class="illus train" alt="">
+            <img src="assets/index/train.png" class="illus train" alt="">
             <p class="line">The paper smells faintly of smoke.</p>
         </section>
 
         <section class="beat">
-            <img src="assets/window.png" class="illus window" alt="">
-            <img src="assets/stuff.png" class="illus binoculars">
+            <img src="assets/index/window.png" class="illus window" alt="">
         </section>
 
         <section class="beat">
@@ -35,7 +34,21 @@
 
         <section class="beat">
             <p class="line big">“Will you accept the invitation?”</p>
+        </section>
+
+        <section class="beat">
+            <img src="assets/index/stuff.png" class="illus binoculars">
+        </section>
+
+        <section class="beat">
+            <p class="line big">...</p>
+        </section>
+
+        <section class="beat">
             <p class="enter"><a href="home.html"><i>I accept.</i></a></p>
+        </section>
+
+        <section class="beat">
             <p class="line">(If not, close this tab and return to safety.)</p>
         </section>
     </div>
@@ -48,7 +61,7 @@
         for (const e of entries) { /* for each beat */
             if (e.isIntersecting) e.target.classList.add("in");
         }
-        }, { threshold: 0.2 }); /* trigger when 20% of the beat is visible */
+        }, { threshold: 1 }); /* trigger when 100% of the beat is visible */
 
         beats.forEach(b => io.observe(b));
     </script>
