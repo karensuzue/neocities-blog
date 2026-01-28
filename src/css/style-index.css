@@ -20,14 +20,17 @@ body {
 .beat {
   margin: 70px 0;      
   /* default state: hidden-ish */
-  opacity: 0;
-  transform: translateY(16px); /* starts slightly below */
-  transition: opacity 700ms ease, transform 700ms ease;
+  /* opacity: 0; */
+  /* transform: translateY(16px); */ /* starts slightly below */ 
+  /* transition: opacity 700ms ease, transform 700ms ease; */
 }
-.beat.in { /* when in view, JS-added*/
-  opacity: 1;
-  transform: translateY(0); /* moves up */
-}
+/* .beat.in { */
+  /* when in view, JS-added*/
+  /* opacity: 1; */
+  /* transform: translateY(0); */ /* moves up */
+/* } */
+
+
 /* cleafix to stop float affecting next sections */
 .beat::after {
   content: "";

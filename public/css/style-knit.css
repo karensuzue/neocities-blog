@@ -1,0 +1,18 @@
+/* ---- KNITTING DETAILS (knit/_.html) ---- */
+.photos {
+    text-align: center;
+}
+.photos img {
+    /* max-width: 100%; */
+    width: 500px;
+    border: 1px solid #c9b6a4;
+    padding: 3px;
+    background: #ffffff;
+    margin-bottom: 10px;
+}
+
+.note {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: #6d5a4a;
+}

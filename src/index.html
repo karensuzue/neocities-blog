@@ -53,7 +53,7 @@
         </section>
     </div>
 
-    <script>
+    <!-- <script>
         // When each "beat" enters the viewport, add the "in" class to trigger CSS animations
         const beats = document.querySelectorAll(".beat");
 
@@ -61,10 +61,10 @@
         for (const e of entries) { /* for each beat */
             if (e.isIntersecting) e.target.classList.add("in");
         }
-        }, { threshold: 1 }); /* trigger when 100% of the beat is visible */
+        }, { threshold: 0 }); 
 
         beats.forEach(b => io.observe(b));
-    </script>
+    </script> -->
 
 </body>
 </html>

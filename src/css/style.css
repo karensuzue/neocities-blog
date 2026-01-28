@@ -241,23 +241,6 @@ p + p {
     margin: 0;
 }
 
-/* ---- KNITTING DETAILS (knit/_.html) ---- */
-.photos {
-    text-align: center;
-}
-.photos img {
-    max-width: 100%;
-    border: 1px solid #c9b6a4;
-    padding: 3px;
-    background: #ffffff;
-    margin-bottom: 10px;
-}
-
-.note {
-    font-family: 'Courier New', monospace;
-    font-size: 13px;
-    color: #6d5a4a;
-}
 
 /* ---- PHOTO ALBUM DETAILS (photo/_.html) ---- */
 .album{
